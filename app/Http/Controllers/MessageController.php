@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SendMessageRequest;
 use App\Mail\MailToOrganization;
 
 use Illuminate\Http\Request;
@@ -9,9 +10,7 @@ use Illuminate\Support\Facades\Mail;
 
 class MessageController extends BaseController
 {
-    public function sendMessage(Request $request){
-
-
+    public function sendMessage(SendMessageRequest $request){
 
 
             try {
@@ -22,7 +21,7 @@ class MessageController extends BaseController
                     "email" => $request->email
                 ]
 
-                
+
                 ));
 
             return  $this->sendResponse( $response,'Ձեր պատասխանը հաջողությամբ ուղարկվել է');
