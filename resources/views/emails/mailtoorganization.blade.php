@@ -10,10 +10,13 @@
     <div class="container">
 
         <div class="message">
-            <p>Organization name: {{ $details['organization_name'] }},</p>
-            <p>Organization email: {{ $details['email'] }},</p>
-            <p>Number of guests: {{ $details['number_guest'] }},</p>
-            <p>Messages: {{ $details['message'] }},</p>
+            <p>Կազմակերպության անվանումը: {{ $details['organization_name'] }},</p>
+            @if ($details['email']!=null)
+            <p>Կազմակերպության էլ․հասցեն: {{ $details['email'] }},</p>
+            @endif
+
+            <p>Հյուրերի քանակը: {{ $details['number_guest'] }},</p>
+            <p>Հաղորդագրություն: {{ $details['message'] }},</p>
 
 
         </div>
