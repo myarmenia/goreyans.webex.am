@@ -22,6 +22,7 @@ class MessageController extends BaseController
                     "email" => $request->email
                 ]
 
+                
                 ));
 
             return  $this->sendResponse( $response,'Ձեր պատասխանը հաջողությամբ ուղարկվել է');
