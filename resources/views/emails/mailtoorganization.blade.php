@@ -11,8 +11,10 @@
 
         <div class="message">
             <p>Organization name: {{ $details['organization_name'] }},</p>
+            <p>Organization email: {{ $details['email'] }},</p>
             <p>Number of guests: {{ $details['number_guest'] }},</p>
             <p>Messages: {{ $details['message'] }},</p>
+
 
         </div>
 
